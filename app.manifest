@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <!-- The identity tag indicates that the application is not dependent on the system processor architecture. -->
+  <assemblyIdentity type="win32" name="YourApplicationName" version="1.0.0.0" processorArchitecture="*"/>
+
+  <!-- The description of your application -->
+  <description>Your Application description here</description>
+
+  <!-- Declaration of the application's trust information. Security requests are declared here. -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC information -->
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false"/>
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <!-- Used by applications that require a strong name. -->
+  <assemblyIdentity type="win32" name="YourApplicationName" version="1.0.0.0" publicKeyToken="0000000000000000"/>
+
+  <!-- Specifies the application's windowing model. -->
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <windowsSettings>
+      <!-- Disable themes for this application -->
+      <!-- <disableTheming>false</disableTheming> -->
+
+      <!-- Disable the DPI awareness for this application -->
+      <!-- <disableWindowFiltering>false</disableWindowFiltering> -->
+
+      <!-- Enable the high-DPI awareness for this application -->
+      <!-- <highResolutionScrollingAware>true</highResolutionScrollingAware> -->
+
+      <!-- Enable the DWM composition for this application -->
+      <!-- <dwmComposition>false</dwmComposition> -->
+    </windowsSettings>
+  </application>
+
+  <!-- Specifies the application's graphics model. -->
+  <dependency>
+    <dependentAssembly>
+      <assemblyIdentity
+          type="win32"
+          name="Microsoft.Windows.Common-Controls"
+          version="6.0.0.0"
+          processorArchitecture="*"
+          publicKeyToken="6595b64144ccf1df"
+          language="*"/>
+    </dependentAssembly>
+  </dependency>
+</assembly>
